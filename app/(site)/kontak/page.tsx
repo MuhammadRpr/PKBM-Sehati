@@ -80,11 +80,18 @@ export default function KontakPage() {
                   </p>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-8 h-64 rounded-lg bg-[#F0F9FF]">
-                  <div className="flex h-full items-center justify-center text-gray-500">
-                    <p>Google Maps Integration (pasang di sini)</p>
-                  </div>
+                {/* Map */}
+                <div className="mt-8 overflow-hidden rounded-lg">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7497844968237!2d107.13842!3d-6.2755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e697c9c9c9c9c9d%3A0x1234567890abcdef!2sPesum%20Grand%20Cikarang%20City!5e0!3m2!1sen!2sid!4v1234567890"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
               </div>
             </div>

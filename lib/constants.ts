@@ -11,11 +11,11 @@ export const SITE_CONFIG = {
   email: 'pkbm.sehati01@gmail.com',
   phone: '+62851234567',
   address: {
-    street: 'JL. TIMOR RAYA KM 66 RT 02 RW 01 OESUSU TAKARI',
-    city: 'Kupang',
-    state: 'Nusa Tenggara Timur',
+    street: 'Perum Grand Cikarang City',
+    city: 'Cikarang Utara',
+    state: 'Jawa Barat',
     country: 'Indonesia',
-    postalCode: '85001',
+    postalCode: '41271',
   },
 };
 
