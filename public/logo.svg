@@ -1,0 +1,17 @@
+<!-- PKBM SEHATI Logo -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0284C7" stroke="#0369A1" stroke-width="2"/>
+  
+  <!-- Book icon -->
+  <path d="M60 70H75V130H60V70Z" fill="white"/>
+  <path d="M85 70H125V75H85V70Z" fill="white"/>
+  <path d="M85 85H125V90H85V85Z" fill="white"/>
+  <path d="M85 100H120V105H85V100Z" fill="white"/>
+  <path d="M85 115H110V120H85V115Z" fill="white"/>
+  
+  <!-- Text -->
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0284C7" text-anchor="middle">
+    PKBM SEHATI
+  </text>
+</svg>

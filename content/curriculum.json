@@ -1,0 +1,97 @@
+{
+  "overview": "PKBM SEHATI menghadirkan program pendidikan kesetaraan yang disesuaikan dengan Standar Nasional Pendidikan Indonesia. Kurikulum kami dirancang untuk memberikan pendidikan berkualitas dengan metode pembelajaran yang fleksibel dan relevan dengan kebutuhan komunitas lokal.",
+  "principles": [
+    "Fleksibilitas dalam waktu dan tempat belajar",
+    "Pembelajaran praktis dan aplikatif",
+    "Pendekatan yang berpusat pada komunitas",
+    "Inklusi dan aksesibilitas untuk semua",
+    "Kualitas pendidikan setara dengan sekolah formal"
+  ],
+  "features": {
+    "flexible": {
+      "title": "Jadwal Fleksibel",
+      "description": "Kelas malam dan sabtu untuk mengakomodasi yang masih bekerja atau memiliki tanggungan keluarga."
+    },
+    "practical": {
+      "title": "Pembelajaran Praktis",
+      "description": "Metode pembelajaran yang menghubungkan teori dengan praktik kehidupan sehari-hari."
+    },
+    "community": {
+      "title": "Fokus Komunitas",
+      "description": "Materi pembelajaran disesuaikan dengan konteks dan kebutuhan komunitas lokal Di Takari."
+    },
+    "accessible": {
+      "title": "Biaya Terjangkau",
+      "description": "Program dengan biaya pendidikan yang terjangkau untuk semua kalangan masyarakat."
+    }
+  },
+  "packages": {
+    "paket-a": {
+      "title": "Paket A - Setara SD",
+      "description": "Mempersiapkan peserta didik menguasai kompetensi dasar membaca, menulis, dan menghitung.",
+      "focusAreas": [
+        "Literasi dasar (membaca, menulis, menghitung)",
+        "Pengetahuan alam dan sosial dasar",
+        "Keterampilan komunikasi",
+        "Disiplin dan karakter positif"
+      ],
+      "outcomes": [
+        "Mampu membaca dan menulis dengan lancar",
+        "Memahami operasi matematika dasar",
+        "Pengetahuan tentang alam semesta dan masyarakat",
+        "Sertifikat SD setara"
+      ]
+    },
+    "paket-b": {
+      "title": "Paket B - Setara SMP",
+      "description": "Pengembangan kompetensi yang lebih mendalam di bidang akademik dan keterampilan sosial.",
+      "focusAreas": [
+        "Penguasaan mata pelajaran inti (Bahasa, Matematika, IPA, IPS)",
+        "Kemampuan berbahasa Inggris dasar",
+        "Keterampilan kolaborasi dan pemecahan masalah",
+        "Literasi digital dasar"
+      ],
+      "outcomes": [
+        "Menguasai materi setara SMP kelas 1-3",
+        "Mampu berkomunikasi dalam Bahasa Inggris basic",
+        "Keterampilan berpikir kritis dan kolaboratif",
+        "Sertifikat SMP setara"
+      ]
+    },
+    "paket-c": {
+      "title": "Paket C - Setara SMA",
+      "description": "Persiapan untuk melanjutkan ke perguruan tinggi atau memasuki dunia kerja profesional.",
+      "focusAreas": [
+        "Penguasaan mendalam mata pelajaran inti",
+        "Bahasa Inggris komunikatif level menengah",
+        "Keterampilan kerja dan entrepreneurship",
+        "Literasi digital dan teknologi informasi"
+      ],
+      "outcomes": [
+        "Menguasai materi setara SMA kelas 1-3",
+        "Siap untuk ujian masuk PTN/PTS",
+        "Memiliki keterampilan kerja yang marketable",
+        "Sertifikat SMA setara"
+      ]
+    }
+  },
+  "assessment": {
+    "description": "Penilaian dilakukan melalui berbagai metode untuk mengukur pencapaian kompetensi peserta didik.",
+    "methods": [
+      "Penilaian formatif (pembelajaran berkelanjutan)",
+      "Penilaian sumatif (ujian akhir)",
+      "Penilaian portofolio (kumpulan karya)",
+      "Penilaian keterampilan praktik"
+    ]
+  },
+  "resources": {
+    "description": "PKBM SEHATI menyediakan berbagai sumber daya untuk mendukung pembelajaran.",
+    "facilities": [
+      "Ruang belajar yang nyaman dan terang",
+      "Perpustakaan dengan koleksi buku",
+      "Laboratorium IPA dasar",
+      "Perlengkapan pembelajaran modern",
+      "Akses WiFi gratis"
+    ]
+  }
+}

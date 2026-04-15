@@ -1,0 +1,103 @@
+[
+  {
+    "id": "paket-a",
+    "slug": "paket-a",
+    "title": "Paket A",
+    "subtitle": "Setara Pendidikan Dasar (SD)",
+    "description": "Program pendidikan kesetaraan setara jenjang SD untuk semua usia yang ingin belajar membaca, menulis, dan menghitung.",
+    "duration": "2 tahun",
+    "startAge": 6,
+    "requirements": [
+      "Minimal 6 tahun",
+      "Motivasi untuk belajar",
+      "Kemampuan dasar berbahasa",
+      "Kehadiran minimal 75%"
+    ],
+    "modules": [
+      "Bahasa Indonesia",
+      "Matematika",
+      "Ilmu Pengetahuan Alam",
+      "Ilmu Pengetahuan Sosial",
+      "Agama dan Budi Pekerti",
+      "Seni dan Budaya"
+    ],
+    "schedule": "Senin - Jumat, 18:00 - 20:00",
+    "capacity": 30,
+    "enrollmentStatus": "open",
+    "benefits": [
+      "Sertifikat resmi setara SD",
+      "Metode pembelajaran fleksibel",
+      "Guru berpengalaman",
+      "Komunitas belajar yang mendukung"
+    ]
+  },
+  {
+    "id": "paket-b",
+    "slug": "paket-b",
+    "title": "Paket B",
+    "subtitle": "Setara Pendidikan Menengah Pertama (SMP)",
+    "description": "Program pendidikan kesetaraan setara jenjang SMP dengan kurikulum praktis yang relevan untuk kehidupan sehari-hari.",
+    "duration": "2 tahun",
+    "startAge": 12,
+    "requirements": [
+      "Lulus Paket A atau setara SD",
+      "Minimal usia 12 tahun",
+      "Motivasi belajar yang tinggi",
+      "Kehadiran minimal 75%"
+    ],
+    "modules": [
+      "Bahasa Indonesia",
+      "Bahasa Inggris",
+      "Matematika",
+      "Ilmu Pengetahuan Alam",
+      "Ilmu Pengetahuan Sosial",
+      "Pendidikan Jasmani & Kesehatan",
+      "Seni dan Budaya"
+    ],
+    "schedule": "Senin - Jumat, 18:00 - 20:30",
+    "capacity": 25,
+    "enrollmentStatus": "open",
+    "benefits": [
+      "Sertifikat resmi setara SMP",
+      "Kurikulum berorientasi kelanjutan studi",
+      "Persiapan untuk Paket C",
+      "Pengembangan keterampilan sosial"
+    ]
+  },
+  {
+    "id": "paket-c",
+    "slug": "paket-c",
+    "title": "Paket C",
+    "subtitle": "Setara Pendidikan Menengah Atas (SMA)",
+    "description": "Program pendidikan kesetaraan setara jenjang SMA untuk persiapan melanjutkan ke perguruan tinggi atau memasuki dunia kerja.",
+    "duration": "2 tahun",
+    "startAge": 15,
+    "requirements": [
+      "Lulus Paket B atau setara SMP",
+      "Minimal usia 15 tahun",
+      "Minat untuk melanjutkan pendidikan atau karir",
+      "Kehadiran minimal 75%"
+    ],
+    "modules": [
+      "Bahasa Indonesia",
+      "Bahasa Inggris",
+      "Matematika",
+      "Ilmu Pengetahuan Alam",
+      "Ilmu Pengetahuan Sosial",
+      "Penjaskes",
+      "Seni dan Budaya",
+      "Keterampilan Hidup",
+      "Entrepreneurship"
+    ],
+    "schedule": "Senin - Jumat, 18:00 - 21:00",
+    "capacity": 20,
+    "enrollmentStatus": "open",
+    "benefits": [
+      "Sertifikat resmi setara SMA",
+      "Persiapan ujian masuk perguruan tinggi",
+      "Pengembangan keterampilan kerja",
+      "Bimbingan karir dan mentoring",
+      "Jaringan alumni yang luas"
+    ]
+  }
+]
