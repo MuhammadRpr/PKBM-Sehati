@@ -42,7 +42,7 @@ export default async function Home() {
       </section>
 
       {/* Latest Articles Section */}
-      <section className="bg-[#F0F9FF] py-12 md:py-16 lg:py-20">
+      <section className="bg-[#F0F9FF] px-4 py-12 md:px-0 md:py-16 lg:py-20">
         <Container>
           <div className="mb-12">
             <h2 className="text-4xl font-bold text-gray-900">Artikel Terbaru</h2>
@@ -58,20 +58,20 @@ export default async function Home() {
                 <Link
                   key={post.slug}
                   href={`/artikel/${post.slug}`}
-                  className="group rounded-lg border border-[#E0E7FF] bg-white transition-shadow hover:shadow-lg"
+                  className="group flex flex-col rounded-lg border border-[#E0E7FF] bg-white p-4 transition-shadow hover:shadow-lg md:p-6"
                 >
                   <div className="mb-3 flex gap-2">
                     <span className="inline-block rounded-full bg-[#E0E7FF] px-3 py-1 text-xs font-semibold text-[#1A63AB]">
                       {post.category}
                     </span>
                   </div>
-                  <h3 className="mb-2 text-xl font-bold text-gray-900 group-hover:text-[#1A63AB]">
+                  <h3 className="mb-3 text-lg font-bold text-gray-900 group-hover:text-[#1A63AB] md:text-xl">
                     {post.title}
                   </h3>
-                  <p className="mb-4 text-sm text-gray-700 line-clamp-2">
+                  <p className="mb-4 flex-grow text-sm text-gray-600 line-clamp-3">
                     {post.description}
                   </p>
-                  <div className="flex justify-between text-sm text-gray-500">
+                  <div className="flex justify-between text-xs text-gray-500 md:text-sm">
                     <span>{formatDate(post.date)}</span>
                     <span>{post.readingTime} min baca</span>
                   </div>

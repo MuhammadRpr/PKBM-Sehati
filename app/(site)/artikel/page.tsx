@@ -32,10 +32,10 @@ export default async function ArtikelPage() {
       </section>
 
       {/* Articles Grid */}
-      <section className="pt-6 pb-2 md:pt-8 md:pb-2 lg:pt-10 lg:pb-2">
+      <section className="px-4 py-6 md:py-8 lg:py-10">
         <Container>
           {posts.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
                 <Link
                   key={post.slug}
@@ -53,14 +53,14 @@ export default async function ArtikelPage() {
                     )}
                   </div>
 
-                  <div className="flex flex-grow flex-col p-6">
+                  <div className="flex flex-grow flex-col p-4 md:p-6">
                     {/* Category Badge */}
                     <div className="mb-3">
                       <Badge variant="primary">{post.category}</Badge>
                     </div>
 
                     {/* Title */}
-                    <h3 className="mb-2 text-xl font-bold text-gray-900 group-hover:text-[#1A63AB]">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold text-gray-900 group-hover:text-[#1A63AB] line-clamp-2">
                       {post.title}
                     </h3>
 
@@ -70,7 +70,7 @@ export default async function ArtikelPage() {
                     </p>
 
                     {/* Meta */}
-                    <div className="flex justify-between border-t pt-3 text-sm text-gray-500">
+                    <div className="flex justify-between border-t border-gray-200 pt-4 text-xs md:text-sm text-gray-500">
                       <span>{formatDate(post.date)}</span>
                       <span>{post.readingTime} min baca</span>
                     </div>
