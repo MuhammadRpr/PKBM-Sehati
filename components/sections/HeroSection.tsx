@@ -12,13 +12,13 @@ import { CTA_BUTTONS } from '@/lib/constants';
  */
 export function HeroSection() {
   return (
-    <section className="relative py-20 text-white">
+    <section className="relative min-h-72 md:min-h-96 overflow-hidden text-white">
       {/* Background Image */}
       <Image
-        src="/images/beranda4.png"
-        alt="Hero Background"
+        src="/images/berandafinal.jpeg"
+        alt="PKBM SEHATI - Pendidikan Inklusif untuk Semua"
         fill
-        className="object-cover"
+        className="object-cover object-center"
         priority
       />
       
@@ -26,12 +26,12 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Content */}
-      <Container className="relative z-10 text-center">
-        <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-          Pendidikan untuk Semua, Tanpa Batas Usia
+      <Container className="relative z-10 text-center py-20 md:py-32 h-full flex flex-col justify-center">
+        <h1 className="mb-8 text-3xl font-bold md:text-5xl">
+          PENDIDIKAN INKLUSIF UNTUK SEMUA
         </h1>
-        <p className="mb-8 text-xl text-blue-100">
-          PKBM SEHATI hadir sebagai solusi pendidikan kesetaraan di Takari, Kupang
+        <p className="mb-8 text-lg md:text-xl text-blue-100">
+          PKBM SEHATI hadir sebagai solusi Pendidikan dan Keterampilan untuk masa depan yang lebih baik
         </p>
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <Link href="/kontak">

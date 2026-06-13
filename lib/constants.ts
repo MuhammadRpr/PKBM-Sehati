@@ -5,17 +5,17 @@
 export const SITE_CONFIG = {
   name: 'PKBM SEHATI',
   description:
-    'Pendidikan non-formal berkualitas di Takari, Kupang. Paket A, B, C dengan metode fleksibel.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pkbmsehati.id',
+    'Pendidikan Inklusif Berkualitas di Kabupaten Bekasi. Program Kesetaraan, Pendidikan Inklusif, dan Keterampilan untuk Masa Depan Lebih Baik.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pkbmsehaticikarang.sch.id',
   locale: 'id_ID',
-  email: 'pkbm.sehati01@gmail.com',
-  phone: '+62851234567',
+  email: 'pkbmsehati25@gmail.com',
+  phone: '081385700823',
   address: {
-    street: 'Perum Grand Cikarang City',
+    street: 'Perum CINITY Blok E1A No.12D',
     city: 'Cikarang Utara',
-    state: 'Jawa Barat',
+    state: 'Kabupaten Bekasi, Jawa Barat',
     country: 'Indonesia',
-    postalCode: '41271',
+    postalCode: '17530',
   },
 };
 
@@ -33,23 +33,32 @@ export const PROGRAMS = [
     slug: 'paket-a',
     title: 'Paket A',
     subtitle: 'Setara Pendidikan Dasar (SD)',
-    description: 'Program pendidikan kesetaraan yang setara dengan Sekolah Dasar (SD) bagi masyarakat yang belum menyelesaikan pendidikan dasar.',
-    aims: 'Memberikan kemampuan dasar membaca, menulis, berhitung, serta pengetahuan dasar kehidupan sehari-hari.',
-    duration: '2 tahun',
-    startAge: 6,
-    requirements: ['Minimal 6 tahun', 'Motivasi untuk belajar', 'Kemampuan dasar berbahasa', 'Kehadiran minimal 75%'],
+    description: 'Program Paket A PKBM Sehati merupakan layanan pendidikan kesetaraan setara Sekolah Dasar (SD) bagi peserta didik yang belum menyelesaikan pendidikan dasar. Pembelajaran dilaksanakan dengan pendekatan yang ramah, fleksibel, dan disesuaikan dengan kebutuhan peserta didik.',
+    aims: 'Membantu peserta didik memperoleh ijazah setara SD dan mengembangkan kemampuan dasar membaca, menulis, serta berhitung.',
+    duration: 'Menyesuaikan hasil asesmen dan riwayat pendidikan',
+    startAge: 7,
+    schedule: 'Jumat & Sabtu',
+    capacity: 30,
+    requirements: ['Minimal 7 tahun ke atas', 'Motivasi untuk belajar', 'Asesmen awal sebelum penempatan program', 'Kehadiran minimal 75%'],
     learningMaterials: [
-      'Bahasa Indonesia dasar (membaca dan menulis)',
-      'Matematika dasar (operasi hitung dasar)',
-      'Ilmu Pengetahuan Alam dan Sosial dasar',
-      'Pendidikan Pancasila dan Kewarganegaraan',
-      'Keterampilan hidup (life skills)'
-    ],
-    modules: [
+      'Pendidikan Agama dan Budi Pekerti',
       'Bahasa Indonesia',
       'Matematika',
-      'Ilmu Pengetahuan Alam',
-      'Ilmu Pengetahuan Sosial',
+      'IPA',
+      'IPS',
+      'Pendidikan Pancasila',
+      'Seni dan Budaya',
+      'Pendidikan Jasmani dan Kesehatan',
+      'Keterampilan Hidup'
+    ],
+    modules: [
+      'Pendidikan Agama dan Budi Pekerti',
+      'Bahasa Indonesia',
+      'Matematika',
+      'IPA',
+      'IPS',
+      'Pendidikan Pancasila',
+      'Seni dan Budaya',
     ],
     graduateResults: [
       'Ijazah setara SD',
@@ -57,16 +66,20 @@ export const PROGRAMS = [
       'Siap melanjutkan ke Paket B'
     ],
     enrollmentStatus: 'open' as const,
+    systemPembelajaran: 'Fleksibel dan Berdiferensiasi',
+    ijazah: 'Setara SD',
   },
   {
     id: 'paket-b',
     slug: 'paket-b',
     title: 'Paket B',
     subtitle: 'Setara Pendidikan Menengah Pertama (SMP)',
-    description: 'Program pendidikan kesetaraan yang setara dengan Sekolah Menengah Pertama (SMP) untuk peserta yang belum menyelesaikan pendidikan menengah pertama.',
-    aims: 'Meningkatkan pengetahuan dasar, keterampilan akademik, dan kesiapan untuk pendidikan lanjutan atau dunia kerja.',
+    description: 'Program Paket B PKBM Sehati merupakan layanan pendidikan kesetaraan setara Sekolah Menengah Pertama (SMP) bagi peserta didik yang belum menyelesaikan pendidikan formal SMP. Pembelajaran dilaksanakan secara fleksibel untuk membantu peserta didik melanjutkan pendidikan dan mengembangkan potensi dirinya.',
+    aims: 'Memperoleh ijazah setara SMP dan mempersiapkan peserta didik untuk melanjutkan pendidikan ke jenjang yang lebih tinggi.',
     duration: '2 tahun',
     startAge: 12,
+    schedule: 'Senin - Jumat',
+    capacity: 25,
     requirements: [
       'Lulus Paket A atau setara SD',
       'Minimal usia 12 tahun',
@@ -75,10 +88,12 @@ export const PROGRAMS = [
     ],
     learningMaterials: [
       'Bahasa Indonesia (pemahaman dan penulisan)',
-      'Matematika dasar hingga menengah',
+      'Bahasa Inggris',
+      'Matematika',
       'Ilmu Pengetahuan Alam (IPA)',
       'Ilmu Pengetahuan Sosial (IPS)',
       'Pendidikan Pancasila dan Kewarganegaraan',
+      'Pendidikan Jasmani dan Kesehatan',
       'Keterampilan hidup dan pengembangan diri'
     ],
     modules: [
@@ -94,29 +109,37 @@ export const PROGRAMS = [
       'Siap melanjutkan ke Paket C'
     ],
     enrollmentStatus: 'open' as const,
+    systemPembelajaran: 'Tatap Muka dan Pendampingan',
+    ijazah: 'Setara SMP',
   },
   {
     id: 'paket-c',
     slug: 'paket-c',
     title: 'Paket C',
-    subtitle: 'Setara Pendidikan Menengah Atas (SMA)',
-    description: 'Program pendidikan kesetaraan yang setara dengan Sekolah Menengah Atas (SMA) untuk masyarakat yang ingin menyelesaikan pendidikan menengah.',
-    aims: 'Mempersiapkan peserta untuk melanjutkan ke perguruan tinggi atau memasuki dunia kerja dengan pengetahuan yang komprehensif.',
-    duration: '2 tahun',
+    subtitle: 'Setara Sekolah Menengah Atas (SMA)',
+    description: 'Program Paket C PKBM Sehati merupakan layanan pendidikan kesetaraan setara Sekolah Menengah Atas (SMA) bagi peserta didik yang belum menyelesaikan pendidikan menengah atas atau memilih jalur pendidikan nonformal. Program ini memberikan kesempatan untuk memperoleh ijazah setara SMA sebagai bekal melanjutkan pendidikan maupun memasuki dunia kerja.',
+    aims: [
+      'Membantu peserta didik memperoleh ijazah setara SMA',
+      'Mempersiapkan peserta didik melanjutkan ke perguruan tinggi',
+      'Mengembangkan kemampuan berpikir kritis, kreatif, dan mandiri',
+      'Membekali peserta didik dengan keterampilan yang bermanfaat dalam kehidupan dan dunia kerja'
+    ] as any,
+    duration: 'Fleksibel sesuai program pembelajaran',
     startAge: 15,
+    schedule: 'Fleksibel sesuai program pembelajaran',
+    capacity: 20,
     requirements: [
       'Lulus Paket B atau setara SMP',
       'Minimal usia 15 tahun',
-      'Minat untuk melanjutkan pendidikan/karir',
-      'Kehadiran minimal 75%'
+      'Memiliki motivasi untuk belajar dan berkembang',
+      'Bersedia mengikuti tata tertib lembaga'
     ],
     learningMaterials: [
-      'Bahasa Indonesia (analisis dan penulisan)',
-      'Matematika dasar hingga lanjutan',
-      'Bahasa Inggris dasar',
-      'Ekonomi, Sosiologi, dan Ilmu Sosial',
-      'Pendidikan Pancasila dan Kewarganegaraan',
-      'Kewirausahaan dan keterampilan kerja'
+      'Pembelajaran tatap muka',
+      'Pendampingan belajar',
+      'Diskusi dan presentasi',
+      'Projek dan praktik keterampilan',
+      'Pemanfaatan teknologi dalam pembelajaran'
     ],
     modules: [
       'Bahasa Indonesia',
@@ -127,9 +150,47 @@ export const PROGRAMS = [
       'Keterampilan Hidup',
     ],
     graduateResults: [
-      'Ijazah setara SMA',
-      'Siap kerja atau melanjutkan pendidikan ke perguruan tinggi',
-      'Keterampilan berpikir kritis dan mandiri'
+      'Memperoleh ijazah Paket C setara SMA',
+      'Siap melanjutkan ke perguruan tinggi',
+      'Memiliki kemampuan akademik, sosial, dan keterampilan hidup yang lebih baik',
+      'Siap memasuki dunia kerja atau mengembangkan usaha mandiri',
+      'Memiliki karakter mandiri, disiplin, dan bertanggung jawab'
+    ],
+    enrollmentStatus: 'open' as const,
+    systemPembelajaran: 'Tatap Muka dan Pendampingan',
+    ijazah: 'Setara SMA',
+  },
+  {
+    id: 'program-inklusif',
+    slug: 'program-inklusif',
+    title: 'Program Inklusif',
+    subtitle: 'Setiap Anak Berhak Belajar',
+    description: 'Program Inklusif PKBM Sehati merupakan layanan pendidikan bagi peserta didik berkebutuhan khusus yang dirancang sesuai kemampuan, kebutuhan, dan potensi masing-masing peserta didik.',
+    aims: 'Memberikan akses pendidikan yang setara dan mengembangkan potensi maksimal setiap peserta didik dalam lingkungan yang aman dan menghargai keberagaman.',
+    duration: 'Menyesuaikan hasil asesmen',
+    startAge: 0,
+    requirements: [
+      'Menyesuaikan hasil asesmen',
+      'Asesmen awal sebelum penempatan program',
+      'Motivasi untuk belajar'
+    ],
+    learningMaterials: [
+      'Pembelajaran berdiferensiasi sesuai kebutuhan',
+      'Keterampilan hidup',
+      'Komunikasi dan interaksi sosial',
+      'Pengembangan bakat dan minat',
+      'Penguatan karakter positif'
+    ],
+    modules: [
+      'Pembelajaran Berdiferensiasi',
+      'Keterampilan Hidup',
+      'Komunikasi Sosial',
+      'Pengembangan Bakat'
+    ],
+    graduateResults: [
+      'Pengembangan potensi maksimal sesuai kemampuan',
+      'Peningkatan kemandirian dan interaksi sosial',
+      'Sertifikat keikutsertaan program'
     ],
     enrollmentStatus: 'open' as const,
   },
@@ -153,7 +214,7 @@ export const SOCIAL_LINKS = {
   youtube: 'https://youtube.com/PKBMSEHATI',
   facebook: 'https://facebook.com/PkbmSehati',
   tiktok: 'https://tiktok.com/pkbm.sehati1',
-  whatsapp: 'https://wa.me/6281385700823',
+  whatsapp: 'https://wa.me/081385700823',
   instagram: 'https://instagram.com/sehati.pkbm',
   email: 'pkbmsehati25@gmail.com',
 };

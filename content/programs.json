@@ -4,30 +4,39 @@
     "slug": "paket-a",
     "title": "Paket A",
     "subtitle": "Setara Pendidikan Dasar (SD)",
-    "description": "Program pendidikan kesetaraan setara jenjang SD untuk semua usia yang ingin belajar membaca, menulis, dan menghitung.",
-    "duration": "2 tahun",
-    "startAge": 6,
+    "description": "Program Paket A PKBM Sehati merupakan layanan pendidikan kesetaraan setara Sekolah Dasar (SD) bagi peserta didik yang belum menyelesaikan pendidikan dasar. Pembelajaran dilaksanakan dengan pendekatan yang ramah, fleksibel, dan disesuaikan dengan kebutuhan peserta didik.",
+    "duration": "Menyesuaikan hasil asesmen dan riwayat pendidikan",
+    "startAge": 7,
     "requirements": [
-      "Minimal 6 tahun",
+      "Minimal 7 tahun ke atas",
       "Motivasi untuk belajar",
-      "Kemampuan dasar berbahasa",
+      "Asesmen awal sebelum penempatan program",
       "Kehadiran minimal 75%"
     ],
     "modules": [
+      "Pendidikan Agama dan Budi Pekerti",
       "Bahasa Indonesia",
       "Matematika",
-      "Ilmu Pengetahuan Alam",
-      "Ilmu Pengetahuan Sosial",
-      "Agama dan Budi Pekerti",
-      "Seni dan Budaya"
+      "IPA",
+      "IPS",
+      "Pendidikan Pancasila",
+      "Seni dan Budaya",
+      "Pendidikan Jasmani dan Kesehatan",
+      "Keterampilan Hidup"
     ],
-    "schedule": "Senin - Jumat, 18:00 - 20:00",
+    "schedule": "Jumat & Sabtu",
     "capacity": 30,
     "enrollmentStatus": "open",
+    "aims": [
+      "Membantu peserta didik memperoleh ijazah setara SD",
+      "Mengembangkan kemampuan membaca, menulis, dan berhitung",
+      "Membentuk karakter yang mandiri, disiplin, dan percaya diri",
+      "Menyiapkan peserta didik untuk melanjutkan ke Paket B"
+    ],
     "benefits": [
-      "Sertifikat resmi setara SD",
-      "Metode pembelajaran fleksibel",
-      "Guru berpengalaman",
+      "Ijazah resmi setara SD",
+      "Metode pembelajaran fleksibel dan berdiferensiasi",
+      "Guru berpengalaman dan peduli",
       "Komunitas belajar yang mendukung"
     ]
   },
@@ -36,7 +45,7 @@
     "slug": "paket-b",
     "title": "Paket B",
     "subtitle": "Setara Pendidikan Menengah Pertama (SMP)",
-    "description": "Program pendidikan kesetaraan setara jenjang SMP dengan kurikulum praktis yang relevan untuk kehidupan sehari-hari.",
+    "description": "Program Paket B PKBM Sehati merupakan layanan pendidikan kesetaraan setara Sekolah Menengah Pertama (SMP) bagi peserta didik yang belum menyelesaikan pendidikan formal SMP. Pembelajaran dilaksanakan secara fleksibel untuk membantu peserta didik melanjutkan pendidikan dan mengembangkan potensi dirinya.",
     "duration": "2 tahun",
     "startAge": 12,
     "requirements": [
@@ -57,8 +66,21 @@
     "schedule": "Senin - Jumat, 18:00 - 20:30",
     "capacity": 25,
     "enrollmentStatus": "open",
+    "aims": [
+      "Memperoleh ijazah setara SMP",
+      "Mengembangkan pengetahuan, keterampilan, dan karakter peserta didik",
+      "Mempersiapkan peserta didik untuk melanjutkan pendidikan ke jenjang yang lebih tinggi",
+      "Menumbuhkan kemandirian dan tanggung jawab dalam kehidupan sehari-hari"
+    ],
+    "learningMethods": [
+      "Pembelajaran tatap muka",
+      "Pendampingan belajar",
+      "Kegiatan projek dan praktik",
+      "Penguatan karakter dan keterampilan hidup",
+      "Pemanfaatan teknologi dalam pembelajaran"
+    ],
     "benefits": [
-      "Sertifikat resmi setara SMP",
+      "Ijazah resmi setara SMP",
       "Kurikulum berorientasi kelanjutan studi",
       "Persiapan untuk Paket C",
       "Pengembangan keterampilan sosial"
@@ -98,6 +120,47 @@
       "Pengembangan keterampilan kerja",
       "Bimbingan karir dan mentoring",
       "Jaringan alumni yang luas"
+    ]
+  },
+  {
+    "id": "program-inklusif",
+    "slug": "program-inklusif",
+    "title": "Program Inklusif",
+    "subtitle": "Setiap Anak Berhak Belajar",
+    "description": "Program Inklusif PKBM Sehati merupakan layanan pendidikan bagi peserta didik berkebutuhan khusus yang dirancang sesuai kemampuan, kebutuhan, dan potensi masing-masing peserta didik. Melalui pembelajaran yang fleksibel dan berdiferensiasi, setiap anak mendapatkan kesempatan untuk berkembang secara optimal dalam lingkungan yang aman, nyaman, dan menghargai keberagaman.",
+    "duration": "Menyesuaikan hasil asesmen",
+    "startAge": 0,
+    "requirements": [
+      "Menyesuaikan hasil asesmen",
+      "Asesmen awal sebelum penempatan program",
+      "Motivasi untuk belajar"
+    ],
+    "modules": [
+      "Pembelajaran berdiferensiasi sesuai kebutuhan",
+      "Keterampilan hidup",
+      "Komunikasi dan interaksi sosial",
+      "Pengembangan bakat dan minat"
+    ],
+    "schedule": "Fleksibel sesuai kebutuhan peserta",
+    "capacity": 15,
+    "enrollmentStatus": "open",
+    "aims": [
+      "Memberikan akses pendidikan yang setara bagi semua peserta didik",
+      "Mengembangkan kemampuan akademik sesuai potensi peserta didik",
+      "Melatih kemandirian dalam kehidupan sehari-hari",
+      "Mengembangkan kemampuan komunikasi dan interaksi sosial",
+      "Mengembangkan bakat, minat, dan keterampilan peserta didik"
+    ],
+    "assessmentProcess": [
+      "Observasi",
+      "Kelas ABK",
+      "Program Inklusi Bertahap"
+    ],
+    "benefits": [
+      "Pembelajaran yang disesuaikan dengan kebutuhan individual",
+      "Lingkungan yang aman, nyaman, dan menghargai keberagaman",
+      "Tim pendidik yang terlatih dan peduli",
+      "Kesempatan mengembangkan potensi maksimal"
     ]
   }
 ]

@@ -34,13 +34,13 @@ export default function KurikulumPage() {
             </p>
 
             {/* Principles */}
-            <div>
+            <div className="mb-12">
               <h3 className="mb-4 text-2xl font-bold">Prinsip Pembelajaran</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 {curriculum.principles.map((principle, idx) => (
                   <div
                     key={idx}
-                    className="rounded-lg bg-[#F0F9FF] p-4"
+                    className="rounded-lg bg-white p-4 border border-[#E0E7FF]"
                   >
                     <p className="font-semibold text-[#093C7D]">{principle}</p>
                   </div>

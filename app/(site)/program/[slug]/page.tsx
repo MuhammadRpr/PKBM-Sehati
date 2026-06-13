@@ -85,17 +85,27 @@ export default function ProgramDetailPage({
               {/* Aims */}
               {(program as any).aims && (
                 <div className="mb-8">
-                  <h2 className="mb-4 text-3xl font-bold">Tujuan</h2>
-                  <p className="text-lg text-gray-700">
-                    {(program as any).aims}
-                  </p>
+                  <h2 className="mb-4 text-3xl font-bold">Tujuan Program</h2>
+                  {Array.isArray((program as any).aims) ? (
+                    <ol className="space-y-3 list-decimal list-inside">
+                      {(program as any).aims.map((aim: string, idx: number) => (
+                        <li key={idx} className="text-gray-700">
+                          {aim}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <p className="text-lg text-gray-700">
+                      {(program as any).aims}
+                    </p>
+                  )}
                 </div>
               )}
 
               {/* Learning Materials */}
               {(program as any).learningMaterials && (
                 <div className="mb-8">
-                  <h2 className="mb-4 text-3xl font-bold">Materi Pembelajaran</h2>
+                  <h2 className="mb-4 text-3xl font-bold">Metode Pembelajaran</h2>
                   <ul className="space-y-3">
                     {(program as any).learningMaterials.map((material: string, idx: number) => (
                       <li key={idx} className="flex gap-3">
@@ -128,14 +138,13 @@ export default function ProgramDetailPage({
                 <h2 className="mb-4 text-3xl font-bold">
                   Persyaratan Pendaftaran
                 </h2>
-                <ul className="space-y-3">
+                <ol className="space-y-3 list-decimal list-inside">
                   {(program as any).requirements.map((req: string, idx: number) => (
-                    <li key={idx} className="flex gap-3">
-                      <span className="flex-shrink-0 text-[#1A63AB]">•</span>
-                      <span className="text-gray-700">{req}</span>
+                    <li key={idx} className="text-gray-700">
+                      {req}
                     </li>
                   ))}
-                </ul>
+                </ol>
               </div>
 
               {/* Graduate Results */}
@@ -158,47 +167,60 @@ export default function ProgramDetailPage({
             <div>
               {/* Info Card */}
               <div className="rounded-lg border border-[#E0E7FF] bg-white p-6">
-                <h3 className="mb-4 text-2xl font-bold">Informasi Program</h3>
+                <h3 className="mb-6 text-2xl font-bold">Informasi Program</h3>
 
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-gray-600">Durasi Program</p>
+                    <p className="text-sm font-semibold text-gray-600">Jenjang Program</p>
                     <p className="text-lg font-semibold text-gray-900">
-                      {program.duration}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-600">
-                      Usia Minimal Peserta
-                    </p>
-                    <p className="text-lg font-semibold text-gray-900">
-                      {(program as any).startAge} tahun ke atas
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-600">
-                      Jadwal Kelas
-                    </p>
-                    <p className="text-lg font-semibold text-gray-900">
-                      {(program as any).schedule}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-600">
-                      Kapasitas Peserta
-                    </p>
-                    <p className="text-lg font-semibold text-gray-900">
-                      {(program as any).capacity} orang
+                      {program.title} ({program.subtitle})
                     </p>
                   </div>
 
                   <div className="border-t pt-4">
+                    <p className="text-sm font-semibold text-gray-600">
+                      Usia Minimal Peserta
+                    </p>
+                    <p className="text-lg font-semibold text-gray-900">
+                      {(program as any).startAge} Tahun ke Atas
+                    </p>
+                  </div>
+
+                  <div className="border-t pt-4">
+                    <p className="text-sm font-semibold text-gray-600">
+                      Jadwal Belajar
+                    </p>
+                    <p className="text-lg font-semibold text-gray-900">
+                      {(program as any).schedule || program.duration}
+                    </p>
+                  </div>
+
+                  {(program as any).systemPembelajaran && (
+                    <div className="border-t pt-4">
+                      <p className="text-sm font-semibold text-gray-600">
+                        Sistem Pembelajaran
+                      </p>
+                      <p className="text-lg font-semibold text-gray-900">
+                        {(program as any).systemPembelajaran}
+                      </p>
+                    </div>
+                  )}
+
+                  {(program as any).ijazah && (
+                    <div className="border-t pt-4">
+                      <p className="text-sm font-semibold text-gray-600">
+                        Ijazah
+                      </p>
+                      <p className="text-lg font-semibold text-gray-900">
+                        {(program as any).ijazah}
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="border-t pt-4">
                     <Link href="/kontak">
                       <Button variant="primary" className="w-full">
-                        Daftar Sekarang
+                        🔵 Daftar Sekarang
                       </Button>
                     </Link>
                   </div>
