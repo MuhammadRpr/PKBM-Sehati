@@ -22,12 +22,12 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* Brand & Description */}
           <div>
-            <div className="mb-4 h-16 w-16">
+            <div className="mb-4 h-20 w-20">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logofinal.png"
                 alt="PKBM Sehati"
-                width={70}
-                height={70}
+                width={80}
+                height={80}
                 className="rounded-full object-cover"
               />
             </div>

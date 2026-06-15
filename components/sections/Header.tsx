@@ -21,9 +21,9 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
       <Container className="flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/" className="relative h-12 w-12">
+        <Link href="/" className="relative h-14 w-14">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logofinal.png"
             alt="PKBM Sehati"
             fill
             className="rounded-full object-cover"

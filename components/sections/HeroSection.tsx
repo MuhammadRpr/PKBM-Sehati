@@ -15,7 +15,7 @@ export function HeroSection() {
     <section className="relative min-h-72 md:min-h-96 overflow-hidden text-white">
       {/* Background Image */}
       <Image
-        src="/images/berandafinal.jpeg"
+        src="/images/cover.jpeg"
         alt="PKBM SEHATI - Pendidikan Inklusif untuk Semua"
         fill
         className="object-cover object-center"
