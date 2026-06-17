@@ -84,7 +84,7 @@ export default function GalleryPage() {
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-lg"
+                className="relative overflow-hidden rounded-lg shadow-md"
               >
                 {/* Image Container */}
                 <div className="relative h-64 w-full overflow-hidden bg-gray-200">
@@ -92,16 +92,8 @@ export default function GalleryPage() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover"
                   />
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <h3 className="mb-2 text-xl font-semibold text-white text-center px-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-blue-100">{item.category}</p>
                 </div>
               </div>
             ))}
