@@ -7,6 +7,8 @@ import { formatDate } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { VisiMisiSection } from '@/components/sections/VisiMisiSection';
+
 /**
  * Homepage
  * Main landing page with hero, programs, and latest articles
@@ -18,6 +20,9 @@ export default async function Home() {
     <>
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Visi & Misi Section */}
+      <VisiMisiSection />
 
       {/* Programs Section */}
       <section className="py-12 md:py-16 lg:py-20">
