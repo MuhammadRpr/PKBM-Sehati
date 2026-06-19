@@ -67,33 +67,42 @@ export default function GalleryPage() {
   return (
     <>
       {/* Header */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="bg-gray-50 pt-16 pb-12 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20">
         <Container className="text-center">
-          <h1 className="mb-4 text-4xl font-bold text-gray-900">Gallery</h1>
-          <div className="mx-auto h-1 w-16 bg-[#1A63AB]"></div>
-          <p className="mt-4 text-lg text-gray-600">
+          <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-[#1A63AB] text-sm font-semibold tracking-wider uppercase mb-4">
+            Dokumentasi
+          </span>
+          <h1 className="mb-6 text-4xl md:text-5xl font-extrabold text-gray-900">Gallery Kegiatan</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Dokumentasi foto kegiatan dan pembelajaran di PKBM SEHATI
           </p>
         </Container>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-16 md:py-24 relative -mt-8">
         <Container>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="relative overflow-hidden rounded-lg shadow-md"
+                className="group relative overflow-hidden rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] border border-gray-100 bg-white"
               >
-                {/* Image Container */}
                 <div className="relative h-64 w-full overflow-hidden bg-gray-200">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                </div>
+                <div className="p-6">
+                  <span className="inline-block rounded-full bg-[#F0F9FF] px-3 py-1 text-xs font-bold tracking-wide text-[#1A63AB] mb-3">
+                    {item.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                    {item.title}
+                  </h3>
                 </div>
               </div>
             ))}

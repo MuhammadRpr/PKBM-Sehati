@@ -17,107 +17,76 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#E0E7FF] bg-[#F0F9FF]">
-      <Container className="py-12">
-        <div className="grid gap-8 md:grid-cols-2">
+    <footer className="border-t border-gray-100 bg-white pt-16 pb-8 md:pt-20 md:pb-12">
+      <Container>
+        <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
           {/* Brand & Description */}
           <div>
-            <div className="mb-4 h-20 w-20">
+            <div className="mb-6 h-20 w-20 relative">
               <Image
                 src="/images/logofinal.png"
                 alt="PKBM Sehati"
-                width={80}
-                height={80}
-                className="rounded-full object-cover"
+                fill
+                className="rounded-full object-cover shadow-sm border border-gray-50"
               />
             </div>
-            <p className="mb-6 text-sm text-gray-700">
+            <p className="mb-8 text-base text-gray-600 leading-relaxed max-w-sm">
               {SITE_CONFIG.description}
             </p>
             
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href={SOCIAL_LINKS.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="YouTube"
               >
-                <Image
-                  src="/images/youtube.png"
-                  alt="YouTube"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/images/youtube.png" alt="YouTube" width={24} height={24} />
               </a>
               <a
                 href={`mailto:${SOCIAL_LINKS.email}`}
-                className="transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="Email"
               >
-                <Image
-                  src="/images/email.png"
-                  alt="Email"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/images/email.png" alt="Email" width={24} height={24} />
               </a>
               <a
                 href={SOCIAL_LINKS.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="TikTok"
               >
-                <Image
-                  src="/images/tiktok.png"
-                  alt="TikTok"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/images/tiktok.png" alt="TikTok" width={24} height={24} />
               </a>
               <a
                 href={SOCIAL_LINKS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="Facebook"
               >
-                <Image
-                  src="/images/facebook.png"
-                  alt="Facebook"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/images/facebook.png" alt="Facebook" width={24} height={24} />
               </a>
               <a
                 href={SOCIAL_LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="WhatsApp"
               >
-                <Image
-                  src="/images/whatsapp.png"
-                  alt="WhatsApp"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/images/whatsapp.png" alt="WhatsApp" width={24} height={24} />
               </a>
               <a
                 href={SOCIAL_LINKS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center transition-opacity hover:opacity-75"
+                className="flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full transition-all hover:bg-[#F0F9FF] hover:-translate-y-1 hover:shadow-md"
                 aria-label="Instagram"
               >
-                <Image
-                  src="/images/instagram.png"
-                  alt="Instagram"
-                  width={25}
-                  height={25}
-                />
+                <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} />
               </a>
             </div>
           </div>
@@ -180,9 +149,8 @@ export function Footer() {
           </div>
         </div>
 
-        
         {/* Copyright */}
-        <div className="border-t pt-6 text-center text-sm text-gray-600">
+        <div className="mt-16 border-t border-gray-100 pt-8 text-center text-sm text-gray-500 font-medium">
           <p>
             &copy; {year} {SITE_CONFIG.name}. Hak cipta dilindungi undang-undang.
           </p>

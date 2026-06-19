@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/Container';
 import { ProgramCard } from '@/components/sections/ProgramCard';
+import { LayananPengembangan } from '@/components/sections/LayananPengembangan';
 import { PROGRAMS } from '@/lib/constants';
 import { Metadata } from 'next';
 
@@ -16,19 +17,22 @@ export default function ProgramPage() {
   return (
     <>
       {/* Header */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="bg-gray-50 pt-16 pb-12 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20">
         <Container className="text-center">
-          <h1 className="mb-4 text-4xl font-bold">Program Pendidikan</h1>
-          <p className="text-xl text-gray-600">
+          <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-[#1A63AB] text-sm font-semibold tracking-wider uppercase mb-4">
+            Pilihan Program
+          </span>
+          <h1 className="mb-6 text-4xl md:text-5xl font-extrabold text-gray-900">Program Pendidikan</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Pilih program yang sesuai dengan kebutuhan pendidikan Anda
           </p>
         </Container>
       </section>
 
       {/* Programs Grid */}
-      <section className="py-0 md:py-0 lg:py-0">
+      <section className="py-16 md:py-24 bg-gray-50 relative -mt-8">
         <Container>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {PROGRAMS.map((program) => (
               <ProgramCard
                 key={program.id}
@@ -39,13 +43,18 @@ export default function ProgramPage() {
         </Container>
       </section>
 
+      {/* Program Layanan dan Pengembangan Section */}
+      <LayananPengembangan />
+
       {/* Info Section */}
-      <section className="bg-[#F0F9FF] py-12 md:py-16 lg:py-20">
+      <section className="bg-white py-16 md:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-6 text-3xl font-bold">
-              Pertanyaan yang Sering Diajukan
-            </h2>
+            <div className="mb-10 text-center">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                Pertanyaan yang Sering Diajukan
+              </h2>
+            </div>
 
             <div className="space-y-6">
               <div>

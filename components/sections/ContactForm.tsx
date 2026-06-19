@@ -31,9 +31,15 @@ export function ContactForm() {
     try {
       setSubmitError(null);
       
-      // TODO: Implement email sending functionality
-      // For now, just show success message
-      console.log('Form data:', data);
+      const subject = encodeURIComponent(data.subject || 'Pertanyaan dari Website PKBM Sehati');
+      const body = encodeURIComponent(
+        `Nama: ${data.name}\n` +
+        `Email: ${data.email}\n` +
+        `No. Telepon: ${data.phone || '-'}\n\n` +
+        `Pesan:\n${data.message}`
+      );
+      
+      window.location.href = `mailto:pkbmsehati25@gmail.com?subject=${subject}&body=${body}`;
       
       setIsSubmitted(true);
       reset();

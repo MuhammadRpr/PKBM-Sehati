@@ -1,5 +1,6 @@
 'use client';
 
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -18,10 +19,10 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <Container className="flex items-center justify-between py-4">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md shadow-sm">
+      <Container className="flex items-center justify-between py-3 md:py-4">
         {/* Logo */}
-        <Link href="/" className="relative h-14 w-14">
+        <Link href="/" className="relative h-12 w-12 md:h-14 md:w-14">
           <Image
             src="/images/logofinal.png"
             alt="PKBM Sehati"
@@ -38,7 +39,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-gray-700 transition-colors hover:text-[#093C7D]"
+                  className="text-gray-600 font-medium transition-colors hover:text-[#1A63AB]"
                 >
                   {item.label}
                 </Link>
@@ -50,43 +51,36 @@ export function Header() {
         {/* CTA Button - Hidden on mobile */}
         <Link
           href="/kontak"
-          className="hidden rounded-lg bg-[#1A63AB] px-6 py-2 text-white transition-colors hover:bg-[#093C7D] md:inline-block"
+          className="hidden rounded-xl bg-[#1A63AB] px-6 py-2 font-semibold text-white transition-all hover:bg-[#093C7D] hover:shadow-md hover:-translate-y-0.5 md:inline-block"
         >
           {CTA_BUTTONS.contact}
         </Link>
 
         {/* Mobile menu button */}
         <button
-          className="relative md:hidden"
+          className="relative md:hidden p-2 -mr-2 rounded-lg text-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#1A63AB]"
           aria-label="Menu"
+          aria-expanded={mobileMenuOpen}
           onClick={toggleMobileMenu}
         >
-          <svg
-            className="h-6 w-6 text-gray-900 transition-colors hover:text-[#1A63AB]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          {mobileMenuOpen ? (
+            <X className="h-7 w-7" />
+          ) : (
+            <Menu className="h-7 w-7" />
+          )}
         </button>
       </Container>
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="absolute right-0 top-full w-56 border-t border-gray-200 bg-white shadow-lg md:hidden">
-          <nav className="flex flex-col">
+        <div className="absolute left-0 top-full w-full border-t border-gray-100 bg-white shadow-xl md:hidden">
+          <nav className="flex flex-col py-2">
             <ul className="flex flex-col">
               {NAVIGATION_ITEMS.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block px-6 py-3 text-gray-700 transition-colors hover:bg-[#F0F9FF] hover:text-[#1A63AB]"
+                    className="block px-6 py-4 text-base font-medium text-gray-700 transition-colors hover:bg-[#F0F9FF] hover:text-[#1A63AB]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -94,10 +88,10 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            <div className="border-t border-gray-200 px-6 py-3">
+            <div className="border-t border-gray-100 p-6 mt-2">
               <Link
                 href="/kontak"
-                className="block w-full rounded-lg bg-[#1A63AB] py-2 text-center text-white transition-colors hover:bg-[#093C7D]"
+                className="block w-full rounded-full bg-[#1A63AB] py-3.5 text-center text-lg font-bold text-white transition-colors hover:bg-[#093C7D]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {CTA_BUTTONS.contact}

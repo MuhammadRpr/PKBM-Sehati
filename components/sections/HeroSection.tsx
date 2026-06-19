@@ -12,7 +12,7 @@ import { CTA_BUTTONS } from '@/lib/constants';
  */
 export function HeroSection() {
   return (
-    <section className="relative min-h-72 md:min-h-96 overflow-hidden text-white">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/cover.jpeg"
@@ -22,32 +22,35 @@ export function HeroSection() {
         priority
       />
       
-      {/* Overlay for better text readability - darker for improved contrast */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      {/* Overlay for better text readability - gradient overlay for a premium look */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/50"></div>
       
       {/* Content */}
-      <Container className="relative z-10 text-center py-20 md:py-32 h-full flex flex-col justify-center">
-        <h1 className="mb-6 text-3xl font-bold md:text-5xl text-white drop-shadow-lg">
-          PENDIDIKAN INKLUSIF<br />UNTUK SEMUA
+      <Container className="relative z-10 py-16 md:py-32 h-full flex flex-col justify-center text-left md:w-2/3">
+        <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full text-sm font-semibold tracking-wider mb-6 w-fit">
+          Selamat Datang di PKBM Sehati
+        </span>
+        <h1 className="mb-6 text-4xl font-extrabold md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg">
+          Pendidikan Inklusif<br />Untuk Semua
         </h1>
-        <p className="mb-8 max-w-2xl mx-auto text-base md:text-lg text-white drop-shadow-md leading-relaxed">
-          Solusi Pendidikan dan Keterampilan untuk Masa Depan yang Lebih Baik
+        <p className="mb-10 text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl">
+          Solusi pendidikan dan keterampilan terbaik untuk membangun masa depan yang lebih cerah, mandiri, dan bermartabat.
         </p>
-        <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-          <Link href="/kontak">
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Link href="/kontak" className="w-full sm:w-auto">
             <Button
               variant="primary"
               size="lg"
-              className="w-full bg-white text-[#1A63AB] hover:bg-[#F0F9FF] sm:w-auto"
+              className="w-full rounded-full bg-[#1A63AB] text-white hover:bg-[#093C7D] border-none shadow-lg py-6 text-lg"
             >
               {CTA_BUTTONS.enroll}
             </Button>
           </Link>
-          <Link href="/program">
+          <Link href="/program" className="w-full sm:w-auto">
             <Button
               variant="outline"
               size="lg"
-              className="w-full border-white text-white hover:bg-[#093C7D] sm:w-auto"
+              className="w-full rounded-full border-2 border-white/70 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#1A63AB] py-6 text-lg"
             >
               {CTA_BUTTONS.viewPrograms}
             </Button>

@@ -2,8 +2,6 @@ import { Container } from '@/components/ui/Container';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ProgramCard } from '@/components/sections/ProgramCard';
 import { PROGRAMS } from '@/lib/constants';
-import { getAllBlogPosts } from '@/lib/mdx';
-import { formatDate } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -13,8 +11,7 @@ import { VisiMisiSection } from '@/components/sections/VisiMisiSection';
  * Homepage
  * Main landing page with hero, programs, and latest articles
  */
-export default async function Home() {
-  const latestPosts = (await getAllBlogPosts()).slice(0, 3);
+export default function Home() {
 
   return (
     <>
@@ -25,17 +22,19 @@ export default async function Home() {
       <VisiMisiSection />
 
       {/* Programs Section */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="bg-gray-50 py-16 md:py-24">
         <Container>
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900">Program Kami</h2>
-            <div className="mt-3 h-1 w-16 bg-[#1A63AB]"></div>
-            <p className="mt-4 text-lg text-gray-600">
-              Tiga paket pendidikan kesetaraan yang disesuaikan dengan kebutuhan Anda
+          <div className="mb-14 text-center">
+            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-[#1A63AB] text-sm font-semibold tracking-wider uppercase mb-4">
+              Layanan Kami
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Program Unggulan</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Pilihan program pendidikan kesetaraan yang disesuaikan dengan kebutuhan masa depan warga belajar
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {PROGRAMS.map((program) => (
               <ProgramCard
                 key={program.id}
@@ -46,62 +45,10 @@ export default async function Home() {
         </Container>
       </section>
 
-      {/* Latest Articles Section */}
-      <section className="bg-[#F0F9FF] px-4 py-12 md:px-0 md:py-16 lg:py-20">
-        <Container>
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900">Artikel Terbaru</h2>
-            <div className="mt-3 h-1 w-16 bg-[#1A63AB]"></div>
-            <p className="mt-4 text-lg text-gray-600">
-              Informasi dan tips seputar pendidikan non-formal
-            </p>
-          </div>
 
-          {latestPosts.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-3">
-              {latestPosts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/artikel/${post.slug}`}
-                  className="group flex flex-col rounded-lg border border-[#E0E7FF] bg-white p-4 transition-shadow hover:shadow-lg md:p-6"
-                >
-                  <div className="mb-3 flex gap-2">
-                    <span className="inline-block rounded-full bg-[#E0E7FF] px-3 py-1 text-xs font-semibold text-[#1A63AB]">
-                      {post.category}
-                    </span>
-                  </div>
-                  <h3 className="mb-3 text-lg font-bold text-gray-900 group-hover:text-[#1A63AB] md:text-xl">
-                    {post.title}
-                  </h3>
-                  <p className="mb-4 flex-grow text-sm text-gray-600 line-clamp-3">
-                    {post.description}
-                  </p>
-                  <div className="flex justify-between text-xs text-gray-500 md:text-sm">
-                    <span>{formatDate(post.date)}</span>
-                    <span>{post.readingTime} min baca</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center text-gray-600">
-              Belum ada artikel yang dipublikasikan.
-            </p>
-          )}
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/artikel"
-              className="inline-block rounded-lg bg-[#1A63AB] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#093C7D]"
-            >
-              Lihat Semua Artikel
-            </Link>
-          </div>
-        </Container>
-      </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden py-12 text-center text-white md:py-16 lg:py-20">
+      <section className="relative overflow-hidden py-20 text-center text-white md:py-32">
         {/* Background Image */}
         <Image
           src="/images/beranda3.png"
@@ -112,19 +59,19 @@ export default async function Home() {
         />
         
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-[#093C7D]/80 backdrop-blur-sm"></div>
         
         {/* Content */}
-        <Container className="relative z-10">
-          <h2 className="mb-4 text-4xl font-bold">
+        <Container className="relative z-10 max-w-3xl mx-auto">
+          <h2 className="mb-6 text-4xl md:text-5xl font-extrabold leading-tight">
             Siap Bergabung Dengan Kami?
           </h2>
-          <p className="mb-8 text-xl">
-            Hubungi kami hari ini untuk informasi lebih lanjut tentang pendaftaran
+          <p className="mb-10 text-xl text-blue-100 leading-relaxed">
+            Mari mulai perjalanan pendidikan Anda bersama PKBM Sehati. Tim kami siap membantu proses pendaftaran Anda.
           </p>
           <Link
             href="/kontak"
-            className="inline-block rounded-lg bg-white px-8 py-3 font-bold text-[#1A63AB] transition-colors hover:bg-[#F0F9FF]"
+            className="inline-block rounded-xl bg-white px-8 py-3 text-lg font-bold text-[#1A63AB] shadow-xl transition-all hover:bg-[#F0F9FF] hover:-translate-y-0.5 hover:shadow-2xl"
           >
             Hubungi Kami Sekarang
           </Link>
