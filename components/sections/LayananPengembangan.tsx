@@ -213,7 +213,7 @@ export function LayananPengembangan() {
 
             <div className="bg-gradient-to-r from-purple-900 to-[#1A63AB] rounded-3xl p-8 md:p-12 text-center shadow-xl text-white">
               <blockquote className="text-xl md:text-2xl font-medium leading-relaxed italic mb-4">
-                "Setiap anak memiliki potensi untuk berkarya. Dengan kesempatan dan pendampingan yang tepat, karya sederhana hari ini dapat menjadi bekal berharga untuk masa depan."
+                &quot;Setiap anak memiliki potensi untuk berkarya. Dengan kesempatan dan pendampingan yang tepat, karya sederhana hari ini dapat menjadi bekal berharga untuk masa depan.&quot;
               </blockquote>
             </div>
           </div>
