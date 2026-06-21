@@ -14,54 +14,27 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   // Gallery items with actual photos
   const galleryItems = [
-    {
-      id: 1,
-      title: 'Seni & Budaya PKBM Sehati',
-      category: 'Budaya',
-      image: '/images/g1.jpeg',
-    },
-    {
-      id: 2,
-      title: 'Kebersamaan Tim PKBM',
-      category: 'Komunitas',
-      image: '/images/g2.jpeg',
-    },
-    {
-      id: 3,
-      title: 'Outing Pembelajaran Bersama',
-      category: 'Pembelajaran',
-      image: '/images/g3.jpeg',
-    },
-    {
-      id: 4,
-      title: 'Perayaan Seni dan Budaya',
-      category: 'Event',
-      image: '/images/g4.jpeg',
-    },
-    {
-      id: 5,
-      title: 'Pameran Karya Siswa',
-      category: 'Keterampilan',
-      image: '/images/g5.jpeg',
-    },
-    {
-      id: 6,
-      title: 'Dokumentasi Kegiatan Santai',
-      category: 'Dokumentasi',
-      image: '/images/g6.jpeg',
-    },
-    {
-      id: 7,
-      title: 'Acara Pelatihan dan Workshop',
-      category: 'Pelatihan',
-      image: '/images/g7.jpeg',
-    },
-    {
-      id: 8,
-      title: 'Dokumentasi Kelas',
-      category: 'Pembelajaran',
-      image: '/images/g8.jpeg',
-    },
+    { id: 1, image: '/images/g1.jpeg', alt: 'Gallery Image 1' },
+    { id: 2, image: '/images/g2.jpeg', alt: 'Gallery Image 2' },
+    { id: 3, image: '/images/g3.jpeg', alt: 'Gallery Image 3' },
+    { id: 4, image: '/images/g4.jpeg', alt: 'Gallery Image 4' },
+    { id: 5, image: '/images/g5.jpeg', alt: 'Gallery Image 5' },
+    { id: 6, image: '/images/g6.jpeg', alt: 'Gallery Image 6' },
+    { id: 7, image: '/images/g7.jpeg', alt: 'Gallery Image 7' },
+    { id: 8, image: '/images/g8.jpeg', alt: 'Gallery Image 8' },
+    { id: 9, image: '/images/g9.jpeg', alt: 'Gallery Image 9' },
+    { id: 10, image: '/images/g10.jpeg', alt: 'Gallery Image 10' },
+    { id: 11, image: '/images/g11.jpeg', alt: 'Gallery Image 11' },
+    { id: 12, image: '/images/g12.jpeg', alt: 'Gallery Image 12' },
+    { id: 13, image: '/images/g13.jpeg', alt: 'Gallery Image 13' },
+    { id: 14, image: '/images/g14.jpeg', alt: 'Gallery Image 14' },
+    { id: 15, image: '/images/15.jpeg', alt: 'Gallery Image 15' },
+    { id: 16, image: '/images/g16.jpeg', alt: 'Gallery Image 16' },
+    { id: 17, image: '/images/g17.jpeg', alt: 'Gallery Image 17' },
+    { id: 18, image: '/images/g18.png', alt: 'Gallery Image 18' },
+    { id: 19, image: '/images/g19.png', alt: 'Gallery Image 19' },
+    { id: 20, image: '/images/g20.png', alt: 'Gallery Image 20' },
+    { id: 21, image: '/images/g21.jpeg', alt: 'Gallery Image 21' },
   ];
 
   return (
@@ -91,18 +64,10 @@ export default function GalleryPage() {
                 <div className="relative h-64 w-full overflow-hidden bg-gray-200">
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={item.alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                </div>
-                <div className="p-6">
-                  <span className="inline-block rounded-full bg-[#F0F9FF] px-3 py-1 text-xs font-bold tracking-wide text-[#1A63AB] mb-3">
-                    {item.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 leading-snug">
-                    {item.title}
-                  </h3>
                 </div>
               </div>
             ))}

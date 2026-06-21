@@ -38,7 +38,7 @@ export function LayananPengembangan() {
           {/* A. Unit Layanan Disabilitas (ULD) */}
           <div className="relative scroll-mt-24" id="uld">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
-              <div className="lg:w-1/3 sticky top-32">
+              <div className="lg:w-1/3 lg:sticky lg:top-32">
                 <div className="w-16 h-16 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <HeartHandshake className="w-8 h-8" />
                 </div>
