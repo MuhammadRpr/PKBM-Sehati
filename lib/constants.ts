@@ -21,6 +21,7 @@ export const SITE_CONFIG = {
 
 export const NAVIGATION_ITEMS = [
   { label: 'Beranda', href: '/' },
+  { label: 'Tentang', href: '/tentang' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Program', href: '/program' },
   { label: 'Kontak', href: '/kontak' },
