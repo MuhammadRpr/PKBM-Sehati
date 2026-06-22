@@ -30,7 +30,7 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormInput) => {
     try {
       setSubmitError(null);
-      
+
       const subject = encodeURIComponent(data.subject || 'Pertanyaan dari Website PKBM Sehati');
       const body = encodeURIComponent(
         `Nama: ${data.name}\n` +
@@ -38,9 +38,9 @@ export function ContactForm() {
         `No. Telepon: ${data.phone || '-'}\n\n` +
         `Pesan:\n${data.message}`
       );
-      
+
       window.location.href = `mailto:pkbmsehati25@gmail.com?subject=${subject}&body=${body}`;
-      
+
       setIsSubmitted(true);
       reset();
       setTimeout(() => setIsSubmitted(false), 5000);
