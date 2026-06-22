@@ -88,7 +88,7 @@ export function generateOrganizationSchema() {
     },
     areaServed: 'ID',
     email: SITE_CONFIG.email,
-    telephone: SITE_CONFIG.phone,
+    telephone: SITE_CONFIG.phones[0],
   };
 }
 
